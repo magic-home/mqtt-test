@@ -10,9 +10,17 @@ This example sends a messages every second and the same process receive the mess
 docker run -ti -p 1883:1883 -p 9001:9001 toke/mosquitto
 ```
 
-* Clone this repo `git clone https://github.com/s8sg/mqtt-test.git`
-```bash
-export MOSQUITTO_BROKER_URL=mqtt://localhost:1883/<topic>
+* Clone this repo 
 ```
-* Run `make` to download dependencies and run the application
+git clone https://github.com/s8sg/mqtt-test.git
+```
+
+* Buid
+```
+make build
+```
+* Run
+```
+MOSQUITTO_BROKER_URL=mqtt://localhost:1883/my_topic ./mqtt-test
+```
 
